@@ -1,0 +1,6 @@
+{
+  "name": "A Arte dos Algoritmos - Uma Jornada Editorial",
+  "description": "Uma experiência editorial interativa e didática sobre a essência dos algoritmos, a busca na lista telefônica e a notação Big-O.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

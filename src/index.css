@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --bg-primary: #FBF9F5;
+    --bg-secondary: #F3EFE6;
+    --bg-card: #FFFFFF;
+    --border-editorial: #E2DBD0;
+    --text-primary: #1C1917;
+    --text-secondary: #57534E;
+    --text-muted: #78716C;
+    --accent-red: #C93B2B;
+    --accent-red-hover: #A82E20;
+    --accent-red-light: #FDF2F0;
+    --ink-black: #111110;
+    --paper-line: #ECE5D8;
+    color-scheme: light;
+  }
+
+  .dark {
+    --bg-primary: #141312;
+    --bg-secondary: #1C1B19;
+    --bg-card: #22201D;
+    --border-editorial: #33302B;
+    --text-primary: #EDE8DF;
+    --text-secondary: #A8A29E;
+    --text-muted: #78716C;
+    --accent-red: #E05343;
+    --accent-red-hover: #F06A5C;
+    --accent-red-light: #2A1715;
+    --ink-black: #FAF8F5;
+    --paper-line: #262420;
+    color-scheme: dark;
+  }
+
+  html {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Newsreader', Georgia, serif;
+    min-height: 100vh;
+  }
+}
+
+.font-serif-title {
+  font-family: 'Newsreader', 'Lora', Georgia, serif;
+}
+
+.font-sans-ui {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.font-mono-code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.font-display {
+  font-family: 'Cinzel', 'Newsreader', serif;
+}
+
+/* Editorial Drop Cap */
+.drop-cap::first-letter {
+  font-size: 3.6em;
+  float: left;
+  line-height: 0.8;
+  margin-right: 0.15em;
+  margin-top: 0.05em;
+  font-family: 'Newsreader', serif;
+  font-weight: 600;
+  color: var(--accent-red);
+}
+
+/* Paper grain subtle overlay */
+.paper-texture {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.dark .paper-texture {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 0);
+}
+
+/* Custom scrollbar for editorial vibe */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-editorial);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-red);
+}
+
